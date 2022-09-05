@@ -7,7 +7,7 @@ const psContentColorDarkTheme = Color(0xFFF5FCF9);
 const psWarninngColor = Color(0xFFF3BB1C);
 const psErrorColor = Color(0xFFF03738);
 const psBackgroundColor = Color.fromARGB(255, 255, 250, 248);
-const psSuccessColor = Color.fromARGB(255, 44, 228, 78);
+const psSuccessColor = Color.fromARGB(255, 3, 176, 41);
 const psDefaultPadding = 20.0;
 
 List<BoxShadow> psBoxShadow(

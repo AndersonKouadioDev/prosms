@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:prosms/screens/expediteur/expediteur.screen.dart';
 import 'package:prosms/screens/others/404.screen.dart';
+import 'package:prosms/screens/repertoire/repertoire.screen.dart';
 
 class SmsService {
   final IconData icon;
@@ -26,15 +28,14 @@ final List<SmsService> smsServices = [
       page: const Screen404()),
   SmsService(
       icon: Icons.sensor_occupied_rounded,
-      title: "Expéditeur",
-      page: const Screen404()),
+      title: "Expéditeurs",
+      page: const ExpediteurScreen()),
   SmsService(
-      icon: Icons.sensor_occupied_rounded,
-      title: "Expéditeur",
-      page: const Screen404()),
+      icon: CupertinoIcons.doc_person,
+      title: "Repertoire",
+      page: const RepertoireScreen()),
   SmsService(
-      icon: Icons.sensor_occupied_rounded,
-      title: "Expéditeur",
+      icon: Icons.horizontal_split_rounded,
+      title: "Historique",
       page: const Screen404()),
 ];
-

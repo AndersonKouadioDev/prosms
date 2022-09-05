@@ -11,8 +11,6 @@ class InfoPersoScreen extends StatefulWidget {
 }
 
 class _InfoPersoScreenState extends State<InfoPersoScreen> {
-
-  
   final Map person = {
     'Nom': "Kouadio",
     "Prenoms": "N'guessan Joseph Anderson",
@@ -50,8 +48,8 @@ class _InfoPersoScreenState extends State<InfoPersoScreen> {
   Map setEnables(String? cle) {
     if (cle != null) {
       enables.updateAll((key, value) => false);
-      enables[cle] = true;
       setState(() {
+        enables[cle] = true;
         isUpdate = true;
       });
     } else {
@@ -127,11 +125,13 @@ class _InfoPersoScreenState extends State<InfoPersoScreen> {
                   )),
                   IconButton(
                       onPressed: () {
-                        setState(() {
-                          enables = setEnables('Login');
-                        });
+                        setEnables('Login');
                       },
-                      icon: const Icon(Icons.edit))
+                      icon: Icon(
+                        Icons.edit,
+                        size: psDefaultPadding,
+                        color: enables['Login'] ? psPrimaryColor : null,
+                      ))
                 ],
               ),
               Row(
@@ -153,11 +153,13 @@ class _InfoPersoScreenState extends State<InfoPersoScreen> {
                   ),
                   IconButton(
                       onPressed: () {
-                        setState(() {
-                          enables = setEnables('Email');
-                        });
+                        setEnables('Email');
                       },
-                      icon: const Icon(Icons.edit))
+                      icon: Icon(
+                        Icons.edit,
+                        size: psDefaultPadding,
+                        color: enables['Email'] ? psPrimaryColor : null,
+                      ))
                 ],
               ),
               Row(
@@ -179,11 +181,13 @@ class _InfoPersoScreenState extends State<InfoPersoScreen> {
                   ),
                   IconButton(
                       onPressed: () {
-                        setState(() {
-                          enables = setEnables('Nom');
-                        });
+                        setEnables('Nom');
                       },
-                      icon: const Icon(Icons.edit))
+                      icon: Icon(
+                        Icons.edit,
+                        size: psDefaultPadding,
+                        color: enables['Nom'] ? psPrimaryColor : null,
+                      ))
                 ],
               ),
               Row(
@@ -205,11 +209,13 @@ class _InfoPersoScreenState extends State<InfoPersoScreen> {
                   ),
                   IconButton(
                       onPressed: () {
-                        setState(() {
-                          enables = setEnables('Prenoms');
-                        });
+                        setEnables('Prenoms');
                       },
-                      icon: const Icon(Icons.edit))
+                      icon: Icon(
+                        Icons.edit,
+                        size: psDefaultPadding,
+                        color: enables['Prenoms'] ? psPrimaryColor : null,
+                      ))
                 ],
               ),
               Row(
@@ -233,11 +239,13 @@ class _InfoPersoScreenState extends State<InfoPersoScreen> {
                   ),
                   IconButton(
                       onPressed: () {
-                        setState(() {
-                          enables = setEnables('Phone');
-                        });
+                        setEnables('Phone');
                       },
-                      icon: const Icon(Icons.edit))
+                      icon: Icon(
+                        Icons.edit,
+                        size: psDefaultPadding,
+                        color: enables['Phone'] ? psPrimaryColor : null,
+                      ))
                 ],
               ),
             ],
